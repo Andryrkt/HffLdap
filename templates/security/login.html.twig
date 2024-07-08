@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello SecurityController!
+{% endblock %}
+
+{% block body %}
+	<h2>Connexion</h2>
+	{% if error %}
+		<div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+	{% endif %}
+	{{form_start(form)}}
+	{{form_row(form.user_name)}}
+	{{form_row(form.password)}}
+	<button type="submit">Envoyer</button>
+	{{form_end(form)}}
+{% endblock %}

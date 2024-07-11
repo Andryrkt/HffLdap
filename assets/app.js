@@ -6,14 +6,12 @@
  */
 
 // any CSS you import will output into a single css file (app.css in this case)
+import "bootstrap";
+import "bootstrap/dist/css/bootstrap.min.css";
+
 import "./styles/app.scss";
+
+import $ from "jquery";
 
 // start the Stimulus application
 import "./bootstrap";
-
-import Pic01 from "./images/PIC01.jpg";
-import Pic02 from "./images/PIC02.jpg";
-import Pic03 from "./images/PIC03.jpg";
-import Pic04 from "./images/PIC04.jpg";
-
-import "bootstrap";

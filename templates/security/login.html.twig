@@ -1,16 +1,36 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello SecurityController!
+{% block title %}Connexion
+{% endblock %}
+
+{% block stylesheets %}
+	{{ encore_entry_link_tags('login') }}
 {% endblock %}
 
 {% block body %}
-	<h2>Connexion</h2>
-	{% if error %}
-		<div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
-	{% endif %}
-	{{form_start(form)}}
-	{{form_row(form.user_name)}}
-	{{form_row(form.password)}}
-	<button type="submit">Envoyer</button>
-	{{form_end(form)}}
+
+	<div class="row justify-content-center w-100">
+		<div class="col-md-6 col-lg-4">
+			{% if error %}
+				<div class="alert alert-danger text-center">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+			{% endif %}
+			<div class="form-signin">
+				<img src="{{ asset('build/images/logoHff.jpg')}}" class="my-3" alt="logo Henrie Fraise">
+				{{ form_start(form) }}
+				<div class="mb-3">
+					{{ form_row(form.user_name) }}
+				</div>
+				<div class="mb-3">
+					{{ form_row(form.password) }}
+				</div>
+				<button type="submit" class="btn btn-primary w-100">Envoyer</button>
+				{{ form_end(form) }}
+			</div>
+		</div>
+	</div>
+
+{% endblock %}
+
+{% block javascripts %}
+	{{ encore_entry_script_tags('login') }}
 {% endblock %}

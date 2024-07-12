@@ -15,6 +15,9 @@
 
 	</head>
 	<body>
+		{% block navigation %}
+			{% include "/shared/_navbar.html.twig" %}
+		{% endblock %}
 		{% block body %}{% endblock %}
 		{{ encore_entry_script_tags('app') }}
 		{% block javascripts %}{% endblock %}

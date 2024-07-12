@@ -1,0 +1,28 @@
+// _navbar.scss
+
+$primaryColor : #fbbb01;
+.navbar {
+    margin-bottom: 1%;
+  
+    .navbar-brand img {
+      width: 150px;
+    }
+  
+    .collapse.navbar-collapse {
+      color: $primaryColor;
+    }
+  
+    .nav-item.dropdown .nav-link {
+      color: $primaryColor;
+  
+      &:hover, 
+      &:focus {
+        color: darken($primaryColor, 10%);
+      }
+    }
+    
+    
+  
+    // Ajoutez d'autres styles personnalisés ici
+  }
+  
